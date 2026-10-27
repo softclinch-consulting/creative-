@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-deep: #08090C;
+    --color-bg-card: #0E1015;
+    --color-bg-card-elevated: #151821;
+    --color-accent-gold: #C5A880;
+    --color-accent-champagne: #D9C19D;
+    --color-text-ivory: #F7F4EE;
+    --color-text-sand: #C2B4A3;
+    --color-text-muted: #8E887E;
+    --color-lagoon-deep: #0B1E28;
+  }
+
+  html {
+    background-color: #0A0C10;
+    color: #EDE8DF;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  /* Custom luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08090C;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252833;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C5A880;
+  }
+}
+
+/* Luxury Editorial Typography */
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-tech {
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Glass Panels with Luxury Refraction */
+.glass-panel-luxury {
+  background: rgba(14, 16, 21, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(197, 168, 128, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.glass-panel-subtle {
+  background: rgba(18, 21, 28, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(22, 26, 35, 0.85);
+  border-color: rgba(197, 168, 128, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(197, 168, 128, 0.1);
+}
+
+/* Champagne Gold Gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F7F4EE 0%, #D9C19D 50%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, rgba(197, 168, 128, 0.4), rgba(217, 193, 157, 0.8), rgba(197, 168, 128, 0.2)) 1;
+}
+
+/* Subtle Film Grain Overlay */
+.cinema-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Horizon Mist Vignette */
+.cinematic-vignette {
+  background: radial-gradient(circle at center, transparent 40%, rgba(8, 9, 12, 0.85) 95%);
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
